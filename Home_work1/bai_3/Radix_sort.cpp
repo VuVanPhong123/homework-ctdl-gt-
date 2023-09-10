@@ -9,7 +9,7 @@ void counting_sort(vector<int>&a,int key){
         amo[i]+=amo[i-1];
     }
     vector<int>b(a.size());
-    for (int i=0;i<a.size();i++){
+    for (int i=a.size()-1;i>=0;i--){
         b[amo[(a[i]/key)%10]]=a[i];
         amo[(a[i]/key)%10]--;
     }
